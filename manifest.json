@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+
+    "name": "FB Lights",
+    "description": "This extension highlights facebook posts containing certain content",
+    "version": "1.0",
+
+    "permissions": [
+        "https://www.facebook.com/",
+        "http://www.facebook.com/",
+        "tabs",
+        "storage"
+    ],
+
+    "content_scripts": [{
+        "matches": ["http://*.facebook.com/*", "https://*.facebook.com/*"],
+        "js": ["clean.js"]
+    }],
+
+    "background": {
+        "scripts": ["bootstrap.js"],
+        "persistent": false
+    },
+
+    "page_action": {
+        "default_title": "FB Lights",
+        "default_icon": "images/icon.png",
+        "default_popup": "settings-popup.html"
+    }
+}
