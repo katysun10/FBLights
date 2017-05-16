@@ -11,13 +11,17 @@ const HIGHLIGHT_KEYWORDS = [
     "thanks"
 ];
 
-var filter = function (node) {
+function filter(node) {
     
 }
 
 function cleanNewsFeed () {
     var posts = document.querySelectorAll(USER_CONTENT_ELEMENT);
-    posts.forEach(filter);
+    //posts.forEach(filter);
+    for(var i = 0; i < posts.length; i++){
+        filter(post[i]);
+        //console.log(posts[i]);
+    }
 }
 
 setInterval(function () {
