@@ -1,4 +1,4 @@
-const SEARCH_INTERVAL = 1000;
+ const SEARCH_INTERVAL = 1000;
 
 const USER_CONTENT_ELEMENT = ".userContentWrapper, .fbUserContent";
 
@@ -11,13 +11,20 @@ const HIGHLIGHT_KEYWORDS = [
     "thanks"
 ];
 
-var filter = function (node) {
+function filter(node) {
     
 }
 
-function cleanNewsFeed () {
+function cleanNewsFeed() {
     var posts = document.querySelectorAll(USER_CONTENT_ELEMENT);
-    posts.forEach(filter);
+   //posts.forEach(filter);
+   //console.log(posts);
+   //console.log(posts.length);
+   console.log(posts);
+    for(var i = 0; i < posts.length; i++){
+        filter(posts[i]);
+        //console.log(posts[i]);
+    }
 }
 
 setInterval(function () {
