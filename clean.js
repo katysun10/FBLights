@@ -53,6 +53,14 @@ function highlightNewsFeed() {
         // how you would implement the highlight logic.
         // For now, if there is something you want to do, make a function
         // for it.
+
+
+        /* Katy's pesudo code
+			in a for loop that runs for each index of posts
+				check if posts contains a link (ie containsLink = true)
+				or if posts contains a specific keyword (ie containsKeyword = true)
+					if yes, then highlight the post using the highlight function
+        */
     }
 }
 
